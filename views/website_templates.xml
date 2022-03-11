@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="option_header_brand_logo" inherit_id="website.option_header_brand_logo" name="NOW Header Brand Logo">
+        <!-- <xpath expr="//img" position="attributes">
+            <attribute name="src">/theme_now/static/src/img/content/now_logo_square.svg</attribute>
+        </xpath>   -->
+    </template>
+    <!-- 
+    <template id="template_header_default" inherit_id="website.template_header_default" name="NOW Template Header Default">
+        <xpath expr="//div[@id='top_menu_container']" position="attributes">
+            <attribute name="class" add="align-items-end" separator=" "/>
+        </xpath>  
+    </template> -->
+
+    <template id="template_header_now" inherit_id="website.template_header_default_align_center" name="Template Header NOW">
+        <xpath expr="//div[@id='top_menu_container']" position="attributes">
+            <attribute name="class" add="align-items-end" separator=" " />
+        </xpath>
+
+        <xpath expr="//t[@t-call='portal.placeholder_user_sign_in']" position="replace" />
+        <xpath expr="//t[@t-call='portal.user_dropdown']" position="replace" />
+        <xpath expr="//t[@t-call='website.placeholder_header_language_selector']" position="replace" />
+        <xpath expr="//t[@t-call='website.placeholder_header_call_to_action']" position="replace" />
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="replace" />
+
+        <xpath expr="//div[@id='top_menu_container']" position="inside">
+            <div id="top_menu_secundary" class="navbar-nav">
+                <!-- Sign In -->
+                <t t-call="theme_now.user_sign_in">
+                    <t t-set="_item_class" t-valuef="nav-item ml-lg-auto" />
+                    <t t-set="_link_class" t-valuef="nav-link font-weight-bold" />
+                </t>
+                <!-- User Dropdown -->
+                <t t-call="theme_now.user_dropdown">
+                    <t t-set="_user_name" t-value="true" />
+                    <t t-set="_item_class" t-valuef="nav-item dropdown ml-lg-auto" />
+                    <t t-set="_link_class" t-valuef="nav-link font-weight-bold" />
+                </t>
+                <!-- Language Selector -->
+                <t t-call="website.placeholder_header_language_selector">
+                    <t t-set="_div_classes" t-valuef="my-auto ml-lg-2" />
+                </t>
+
+                <a href="#" class="nav-link">
+                    <span class="mdi mdi-lg mdi-bookmark-outline"></span>
+                </a> 
+                <a href="#" class="nav-link">
+                    <span class="mdi mdi-lg mdi-shopping-outline"></span>
+                </a>                
+            </div>
+        </xpath>
+
+    </template>
+
+
+</odoo>

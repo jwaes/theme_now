@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="theme_now.primary_variables_scss" model="theme.ir.asset">
+        <field name="key">theme_now.primary_variables_scss</field>
+        <field name="name">Primary variables SCSS</field>
+        <field name="bundle">web._assets_primary_variables</field>
+        <field name="path">theme_now/static/src/scss/primary_variables.scss</field>
+    </record>
+
+    <record id="theme_now.secondary_variables_scss" model="theme.ir.asset">
+        <field name="key">theme_now.secondary_variables_scss</field>
+        <field name="name">Secondary variables SCSS</field>
+        <field name="bundle">web._assets_secondary_variables</field>
+        <field name="path">theme_now/static/src/scss/secondary_variables.scss</field>
+    </record>
+
+    <record id="theme_now.bootstrap_overridden_scss" model="theme.ir.asset">
+        <field name="key">theme_now.bootstrap_overridden_scss</field>
+        <field name="name">Bootstrap overridden SCSS</field>
+        <field name="bundle">web._assets_frontend_helpers</field>
+        <field name="directive">prepend</field>
+        <field name="path">theme_now/static/src/scss/bootstrap_overridden.scss</field>
+    </record>
+    
+    <record id="theme_now.bootstrap_overridden_scss" model="theme.ir.asset">
+        <field name="key">theme_now.bootstrap_overridden_scss</field>
+        <field name="name">Bootstrap overridden SCSS</field>
+        <field name="bundle">web._assets_frontend_helpers</field>
+        <field name="directive">prepend</field>
+        <field name="path">theme_now/static/src/scss/bootstrap_overridden.scss</field>
+    </record>      
+
+</odoo>

@@ -1,0 +1,68 @@
+
+//------------------------------------------------------------------------------
+// Colors
+//------------------------------------------------------------------------------
+$o-color-palettes: map-merge($o-color-palettes,
+    (
+        'now': (
+            'o-color-1': #44403C,
+            'o-color-2': #78716c,
+            'o-color-3': #702c2c,
+            'o-color-4': #fcfaf8,
+            'o-color-5': #1e2b37,
+
+            'menu': 4,
+            'footer': 4,
+        ),
+    ),
+);
+
+//------------------------------------------------------------------------------
+// Fonts
+//------------------------------------------------------------------------------
+
+// $o-theme-h1-font-size-multiplier: (48 / 14);
+// $o-theme-h2-font-size-multiplier: (36 / 14);
+// $o-theme-h3-font-size-multiplier: (30 / 14);
+// $o-theme-h4-font-size-multiplier: (24 / 14);
+// $o-theme-h5-font-size-multiplier: 1;
+// $o-theme-h6-font-size-multiplier: (12 / 14);
+
+$o-theme-font-configs: (
+    'EB Garamond': (
+        'family': ('EB Garamond', serif),
+        'url': 'EB+Garamond:300,300i,400,400i,700,700i',
+    ),    
+    'Montserrat': (
+        'family': ('Montserrat', serif),
+        'url': 'Montserrat:300,300i,400,400i,500,500i,600,600i',
+    ),
+);
+
+//------------------------------------------------------------------------------
+// Website customizations
+//------------------------------------------------------------------------------
+
+$o-website-values-palettes: (
+    (
+        'color-palettes-name': 'now',
+
+        // 'header-font-size': (20 / 16) * 1rem,
+        'font': 'Montserrat',
+        'font-weight': 500,
+        'headings-font': 'Montserrat',
+        'navbar-font': 'Montserrat',
+        'buttons-font': 'Montserrat',
+        'btn-secondary-outline': true,
+        'footer-template': 'minimalist',
+
+    ),
+);
+
+// $o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'monglia-1');
+// $o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'now');
+$o-selected-color-palettes-names:('now');
+
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Blocks/04', (5:5, 3:2, 2:3, 1:4));
+$o-bg-shapes: add-extra-shape-colors-mapping('web_editor', 'Blocks/04', 'second', (5:5, 3:2, 2:3, 1:4));
+

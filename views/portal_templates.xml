@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="user_sign_in" name="NOW User Sign In" inherit_id="portal.user_sign_in">
+        <xpath expr="//a[@t-attf-href='/web/login']" position="replace">
+            <a t-attf-href="/web/login" t-attf-class="#{_link_class}">
+                <span class="mdi mdi-lg mdi-account-outline" title="Sign in"></span>
+                <span t-if="request.session.profile_session" class="text-danger fa fa-circle" />
+            </a>
+        </xpath>
+    </template>
+
+    <template id="user_dropdown" inherit_id="portal.user_dropdown" name="NOW Portal User Dropdown">
+        <xpath expr="//li/a" position="replace">
+            <a href="#" role="button" data-toggle="dropdown" t-attf-class="#{_link_class}">
+                <t t-set="display_username" t-value="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" />
+                <span class="mdi mdi-lg mdi-account-circle-outline" t-att-title="display_username"></span>
+            </a>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="s_image_text" inherit_id="website.s_image_text">
+        <xpath expr="//img" position="attributes">
+            <attribute name="src">/theme_now/static/src/img/content/cabin_vertical.jpg</attribute>
+            <attribute name="class" add="float-right" remove="mx-auto" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[@class='container']/div" position="attributes">
+            <attribute name="class" add="align-items-end" remove="align-items-center" separator=" "/>
+        </xpath>    
+
+        <xpath expr="//div[2]" position="attributes">
+            <attribute name="class" add="col-lg-3" remove="col-lg-6" separator=" "/>
+        </xpath>
+
+        <xpath expr="//h2" position="replace">
+            <h3>Dun Aluinn x Fuse</h3>
+        </xpath>    
+
+        <xpath expr="//p" position="replace">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis placeat rem aliquid modi voluptatem.</p>
+        </xpath>    
+
+        <xpath expr="//p[3]" position="replace">
+            <p><a class="btn btn-secundary" href="#">read story</a></p>
+        </xpath>
+
+        <xpath expr="//p[2]" position="replace"/>
+
+    </template>    
+
+</odoo>

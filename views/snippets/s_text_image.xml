@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="s_text_image" inherit_id="website.s_text_image">
+        <xpath expr="//img" position="attributes">
+            <attribute name="src">/theme_now/static/src/img/content/window_square.jpg</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='container']/div" position="attributes">
+            <attribute name="class" add="align-items-end" remove="align-items-center" separator=" "/>
+        </xpath>    
+
+        <xpath expr="//div[@class='container']/div/div[1]" position="attributes">
+            <attribute name="class" add="col-lg-3 offset-lg-3" remove="col-lg-6" separator=" "/>
+        </xpath> 
+
+        <xpath expr="//h2" position="replace">
+            <h3>NOW x Reflex 'The residence'</h3>
+        </xpath>    
+
+        <xpath expr="//p" position="replace">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos odit totam natus omnis facere magni iusto iste, dolor rerum dolorum!</p>
+        </xpath>    
+
+        <xpath expr="//p[3]" position="replace">
+            <p><a class="btn btn-secundary" href="#">read story</a></p>
+        </xpath>
+
+        <xpath expr="//p[2]" position="replace"/>
+
+    </template>
+
+</odoo>
