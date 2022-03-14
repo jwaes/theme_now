@@ -44,13 +44,26 @@
 
                 <a href="#" class="nav-link">
                     <span class="mdi mdi-lg mdi-bookmark-outline"></span>
-                </a> 
-                <a href="#" class="nav-link">
-                    <span class="mdi mdi-lg mdi-shopping-outline"></span>
-                </a>                
+                </a>
+
+                <t t-call="website_sale.header_cart_link">
+                    <t t-set="_icon" t-value="True" />
+                    <t t-set="_item_class" t-value="'nav-item'" />
+                    <t t-set="_link_class" t-value="'nav-link'" />
+                </t>
             </div>
         </xpath>
+    </template>
 
+    <template id="template_header_default" inherit_id="website_sale.template_header_default">
+        <!-- do nothing, already done above -->
+        <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="replace"/>
+    </template>
+
+    <template id="header_cart_link" inherit_id="website_sale.header_cart_link" name="Header Cart Link NOW">
+        <xpath expr="//i" position="replace">
+            <span t-if="_icon" class="mdi mdi-lg mdi-shopping-outline"></span>
+        </xpath>
     </template>
 
     <template id="template_footer_now2" inherit_id="website.layout" name="Template Footer NOW">
@@ -65,30 +78,57 @@
                             <div class="col-lg-2 pb16">
                                 <h5>Company</h5>
                                 <ul class="list-unstyled">
-                                    <li class="py-1"><a href="#">About</a></li>
-                                    <li class="py-1"><a href="#">Designers</a></li>
-                                    <li class="py-1"><a href="#">Retailers</a></li>
-                                    <li class="py-1"><a href="#">Ordering &amp; shipping</a></li>
-                                    <li class="py-1"><a href="#">Terms &amp; conditions</a></li>
+                                    <li class="py-1">
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="#">Designers</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="#">Retailers</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="#">Ordering &amp; shipping</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="#">Terms &amp; conditions</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-lg-2 pb16">
                                 <h5>Follow us</h5>
-                                <ul class="list-unstyled">                            
-                                    <li class="py-1"><i class="fa fa-1x fa-fw fa-twitter-square mr-2"/><a href="/website/social/twitter" target="_blank">Twitter</a></li>                                
-                                    <li class="py-1"><i class="fa fa-1x fa-fw fa-instagram mr-2"/><a href="/website/social/instagram" target="_blank">Instagram</a></li>
-                                    <li class="py-1"><i class="fa fa-1x fa-fw fa-pinterest mr-2"/><a href="/website/social/pinterest" target="_blank">Pinterest</a></li>
+                                <ul class="list-unstyled">
+                                    <li class="py-1">
+                                        <i class="fa fa-1x fa-fw fa-twitter-square mr-2" />
+                                        <a href="/website/social/twitter" target="_blank">Twitter</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa fa-1x fa-fw fa-instagram mr-2" />
+                                        <a href="/website/social/instagram" target="_blank">Instagram</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa fa-1x fa-fw fa-pinterest mr-2" />
+                                        <a href="/website/social/pinterest" target="_blank">Pinterest</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-lg-2 pb16">
                                 <h5>Professional</h5>
                                 <ul class="list-unstyled">
-                                    <li class="py-1"><a href="#">B2B</a></li>
-                                    <li class="py-1"><a href="#">Catalogus</a></li>
-                                    <li class="py-1"><a href="#">3D files</a></li>
-                                    <li class="py-1"><a href="#">Image bank</a></li>
+                                    <li class="py-1">
+                                        <a href="#">B2B</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="#">Catalogus</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="#">3D files</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="#">Image bank</a>
+                                    </li>
                                 </ul>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                 </section>
