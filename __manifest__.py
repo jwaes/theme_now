@@ -14,6 +14,7 @@
         'views/customizations.xml',
         'views/website_templates.xml',
         'views/portal_templates.xml',
+        'views/snippets/snippets.xml',
         'views/snippets/s_text_block.xml',
         'views/snippets/s_text_image.xml',
         'views/snippets/s_image_text.xml',

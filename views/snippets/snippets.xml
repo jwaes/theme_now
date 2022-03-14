@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="now_snippets" inherit_id="website.snippet_options" name="Snippets NOW">
+        <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
+            <we-button title="NOW" 
+                data-customize-website-views="theme_now.template_footer_now2" 
+                data-customize-website-variable="'NOW'" 
+                data-img="/theme_now/static/src/img/content/now_logo_horizontal.svg"
+            />
+        </xpath>
+    </template>
+</odoo>

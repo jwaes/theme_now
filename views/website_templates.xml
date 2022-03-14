@@ -53,5 +53,47 @@
 
     </template>
 
+    <template id="template_footer_now2" inherit_id="website.layout" name="Template Footer NOW">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                <section class="s_text_block pt48 pb16" data-snippet="s_text_block" data-name="Text">
+                    <div class="container">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-6 pb16">
+                                <img src="/theme_now/static/src/img/content/now_logo_horizontal.svg" />
+                            </div>
+                            <div class="col-lg-2 pb16">
+                                <h5>Company</h5>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#">About</a></li>
+                                    <li class="py-1"><a href="#">Designers</a></li>
+                                    <li class="py-1"><a href="#">Retailers</a></li>
+                                    <li class="py-1"><a href="#">Ordering &amp; shipping</a></li>
+                                    <li class="py-1"><a href="#">Terms &amp; conditions</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 pb16">
+                                <h5>Follow us</h5>
+                                <ul class="list-unstyled">                            
+                                    <li class="py-1"><i class="fa fa-1x fa-fw fa-twitter-square mr-2"/><a href="/website/social/twitter" target="_blank">Twitter</a></li>                                
+                                    <li class="py-1"><i class="fa fa-1x fa-fw fa-instagram mr-2"/><a href="/website/social/instagram" target="_blank">Instagram</a></li>
+                                    <li class="py-1"><i class="fa fa-1x fa-fw fa-pinterest mr-2"/><a href="/website/social/pinterest" target="_blank">Pinterest</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 pb16">
+                                <h5>Professional</h5>
+                                <ul class="list-unstyled">
+                                    <li class="py-1"><a href="#">B2B</a></li>
+                                    <li class="py-1"><a href="#">Catalogus</a></li>
+                                    <li class="py-1"><a href="#">3D files</a></li>
+                                    <li class="py-1"><a href="#">Image bank</a></li>
+                                </ul>
+                            </div>                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
 
 </odoo>
