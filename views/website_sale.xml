@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="products" name="NOW products" inherit_id="website_sale.products">
+        <xpath expr="//table" position="replace">
+            <div class="container">
+                    <div t-foreach="bins" t-as="tr_product" class="row d-flex align-items-stretch">
+                        <t t-foreach="tr_product" t-as="td_product">
+                            <t t-if="td_product">
+                                <t t-set="product" t-value="td_product['product']" />
+                                <!-- We use t-attf-class here to allow easier customization -->
+                                <div t-att-colspan="td_product['x'] != 1 and td_product['x']"
+                                    t-att-rowspan="td_product['y'] != 1 and td_product['y']"
+                                    
+                                    t-att-data-ribbon-id="td_product['ribbon'].id"
+                                    class="s_col_no_bgcolor pt16 pb16 col-lg-3">
+                                   
+                                        <t t-call="website_sale.products_item">
+                                            <t t-set="product_image_big" t-value="True"/>
+                                        </t>
+
+                                </div>
+                            </t>
+                            <td t-else=""/>
+                        </t>
+                    </div>
+            </div>
+        </xpath>
+    </template>
+
+
+    <template id="products_item" name="NOW Products item" inherit_id="website_sale.products_item">
+        <xpath expr="//form" position="replace">
+            <div class="card bg-white h-100 border" style="border-width: 0.5px !important;">
+            <form action="/shop/cart/update" method="post" t-att-data-publish="product.website_published and 'on' or 'off'" itemscope="itemscope" itemtype="http://schema.org/Product">
+                <a class="o_product_link css_editable_mode_hidden" t-att-href="product_href" />
+                <div class="card-body p-0 oe_product_image">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                    <a t-att-href="product_href" class="d-block h-100" itemprop="url">
+                        <t t-set="image_holder" t-value="product._get_image_holder()" />
+                        <span t-field="image_holder.image_1920" t-options="{'widget': 'image', 'preview_image': 'image_1024' if product_image_big else 'image_256', 'itemprop': 'image', 'qweb_img_responsive': False, 'class': 'now-product-list-image'}" class="d-flex h-100 justify-content-center align-items-center" />
+                    </a>
+                </div>
+                <div class="card-body p-0 o_wsale_product_information">
+                    <div class="p-3 o_wsale_product_information_text">
+                        <h3 class="card-title">
+                            <a class="text-primary text-decoration-none" itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name" />
+                            <a role="button" t-if="not product.website_published" t-att-href="product_href" class="btn btn-sm btn-danger" title="This product is unpublished.">Unpublished</a>
+                        </h3>
+                        <p itemprop="description" t-field="product.description_sale" contenteditable="false"/>
+                        <p class="product_price" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+                            <span class="now_price" t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                            <del t-attf-class="text-danger ml-1 h6 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                            <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                            <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                        </p>
+                    </div>
+                    <div class="o_wsale_product_btn pl-2" />
+                </div>
+                <t t-set="bg_color" t-value="td_product['ribbon']['bg_color'] or ''" />
+                <t t-set="text_color" t-value="td_product['ribbon']['text_color']" />
+                <t t-set="bg_class" t-value="td_product['ribbon']['html_class']" />
+                <span t-attf-class="o_ribbon #{bg_class}" t-attf-style="#{text_color and ('color: %s; ' % text_color)}#{bg_color and 'background-color:' + bg_color}" t-out="td_product['ribbon']['html'] or ''" />
+            </form>
+        </div>
+        </xpath>
+    </template>
+
+    <template id="products_description" name="NOW description" inherit_id="website_sale.products_description">
+        <xpath expr="//div[hasclass('oe_subdescription')]" position="replace"/>
+    </template>
+</odoo>

@@ -31,3 +31,7 @@ section.s_video_43 div.media_iframe_video_size {
 h2 {
     font-family: "Lato", "Odoo Unicode Support Noto", sans-serif;
 }
+
+.now-product-list-image {
+    height: 385px;
+}

@@ -12,6 +12,7 @@
     'data': [
         'data/ir_asset.xml',
         'views/customizations.xml',
+        'views/website_sale.xml',
         'views/website_templates.xml',
         'views/portal_templates.xml',
         'views/snippets/snippets.xml',
