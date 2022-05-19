@@ -22,7 +22,7 @@
         <xpath expr="//t[@t-call='portal.user_dropdown']" position="replace" />
         <xpath expr="//t[@t-call='website.placeholder_header_language_selector']" position="replace" />
         <xpath expr="//t[@t-call='website.placeholder_header_call_to_action']" position="replace" />
-        <xpath expr="//t[@t-call='website.navbar_toggler']" position="replace" />
+        <!-- <xpath expr="//t[@t-call='website.navbar_toggler']" position="replace" /> -->
 
         <xpath expr="//div[@id='top_menu_container']" position="inside">
             <div id="top_menu_secundary" class="navbar-nav">
@@ -55,8 +55,8 @@
         </xpath>
     </template>
 
+
     <template id="template_header_default" inherit_id="website_sale.template_header_default">
-        <!-- do nothing, already done above -->
         <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="replace"/>
     </template>
 
@@ -64,6 +64,12 @@
         <xpath expr="//i" position="replace">
             <span t-if="_icon" class="mdi mdi-lg mdi-shopping-outline"></span>
         </xpath>
+
+        <!-- <sup class="my_cart_quantity badge badge-primary" t-esc="" t-att-data-order-id="website_sale_order and website_sale_order.id or ''"/> -->
+        <xpath expr="//sup" position="attributes">
+            <attribute name="t-if">int(website_sale_order and website_sale_order.cart_quantity or '0') &gt; 0</attribute>
+        </xpath>
+
     </template>
 
     <template id="template_footer_now2" inherit_id="website.layout" name="Template Footer NOW">

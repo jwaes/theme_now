@@ -7,6 +7,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+.nav-link {
+    padding: 0;
+}
+
 .o_header_affixed.o_header_is_scrolled .navbar {
     padding: 0.75rem 1rem;
 }
@@ -14,4 +18,16 @@ h1, h2, h3, h4, h5, h6 {
 .mdi-lg {
     font-size: 1.5em;
     line-height: 0.75em;
+}
+
+section.s_video_169 div.media_iframe_video_size {
+    padding-bottom: 56.25%;
+}
+
+section.s_video_43 div.media_iframe_video_size {
+    padding-bottom: 75%;
+}
+
+h2 {
+    font-family: "Lato", "Odoo Unicode Support Noto", sans-serif;
 }

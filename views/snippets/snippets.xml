@@ -2,12 +2,23 @@
 <odoo>
 
     <template id="now_snippets" inherit_id="website.snippet_options" name="Snippets NOW">
+        <xpath expr="//we-select[@data-variable='header-template']" position="inside">
+            <we-button title="NOW header" data-customize-website-views="theme_now.template_header_now" data-customize-website-variable="'NOW'" data-img="/theme_now/static/src/img/content/now_logo_horizontal.svg" />
+        </xpath>
+
         <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
-            <we-button title="NOW" 
-                data-customize-website-views="theme_now.template_footer_now2" 
-                data-customize-website-variable="'NOW'" 
-                data-img="/theme_now/static/src/img/content/now_logo_horizontal.svg"
-            />
+            <we-button title="NOW footer" data-customize-website-views="theme_now.template_footer_now2" data-customize-website-variable="'NOW'" data-img="/theme_now/static/src/img/content/now_logo_horizontal.svg" />
+        </xpath>
+    </template>
+
+    <template id="snippets_template" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_now.s_video_169">
+                <keywords>image, media</keywords>
+            </t>
+            <t t-snippet="theme_now.s_video_43">
+                <keywords>image, media</keywords>
+            </t>            
         </xpath>
     </template>
 </odoo>

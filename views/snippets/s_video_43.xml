@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ======== Video full width ======== -->
+    <template id="s_video_43" name="Video 4:3">
+        <section class="s_video_43 pt0 pb0 o_colored_level" data-snippet="s_video_43" data-name="Video 4:3" style="background-image: none;">
+
+            <div class="media_iframe_video" data-oe-expression="//www.youtube.com/embed/agZVKqjtY60?autoplay=1&amp;mute=1&amp;rel=0&amp;loop=1&amp;playlist=agZVKqjtY60&amp;controls=0">
+                <div class="css_editable_mode_display"></div>
+                <div class="media_iframe_video_size"></div>
+                <iframe src="//www.youtube.com/embed/agZVKqjtY60?autoplay=1&amp;mute=1&amp;rel=0&amp;loop=1&amp;playlist=agZVKqjtY60&amp;controls=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+              </div>
+
+          </section> 
+
+       
+    </template>
+
+</odoo>
