@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+        <!-- Dynamic Filter -->
+        <record id="now_dynamic_filter_newest_products" model="website.snippet.filter">
+            <field name="filter_id" ref="website_sale.dynamic_snippet_newest_products_filter"/>
+            <field name="field_names">display_name,description_sale,image_512,image_landscape,image_portrait,price:monetary</field>
+            <field name="limit" eval="16"/>
+            <field name="name">NOW Newest Products</field>
+        </record>
+
+    </data>
+</odoo>

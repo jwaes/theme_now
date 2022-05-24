@@ -10,7 +10,9 @@
     
     'depends': ['theme_common', 'website', 'website_sale'],
     'data': [
+        'data/data.xml',
         'data/ir_asset.xml',
+        'data/product_snippet_template_data.xml',
         'views/customizations.xml',
         'views/website_sale.xml',
         'views/website_templates.xml',

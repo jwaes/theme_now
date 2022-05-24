@@ -33,5 +33,5 @@ h2 {
 }
 
 .now-product-list-image {
-    height: 385px;
+    object-fit: contain !important;
 }

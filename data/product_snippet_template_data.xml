@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<data noupdate="0">
+
+    <template id="dynamic_filter_template_product_product_now_2" name="NOW 2">
+        <t t-foreach="records" t-as="data">
+            <t t-set="record" t-value="data['_record']"/>
+            <div class="o_carousel_product_card card h-100 w-100 border" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+                <div t-if="is_sample" class="h5 o_ribbon_right bg-primary text-uppercase">Sample</div>
+                <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+                <a class="o_carousel_product_img_link" t-att-href="record.website_url">
+                    <img class="now-product-list-image o_carousel_product_card_img_top card-img-top h-100" loading="lazy" t-att-src="data['image_portrait']"
+                        t-att-alt="record.display_name"/>
+                </a>
+                <i t-if="data.get('_latest_viewed')" class="fa fa-trash o_carousel_product_remove js_remove"></i>
+                <div class="o_carousel_product_card_body card-body border-top">
+                    <a t-att-href="record.website_url" class="text-decoration-none">
+                        <div class="h3 card-title mb-0" t-field="record.display_name"/>
+                    </a>
+                    <p itemprop="description" t-field="record.description_sale" contenteditable="false"/>
+                    <p t-if="record.is_image_landscape">landscape</p>
+                    <p t-if="record.is_image_portrait">portrait</p>
+                    <p t-if="record.is_image_square">square</p>
+                    <div class="mt-2">
+                        <t t-if="is_view_active('website_sale.product_comment')" t-call="portal_rating.rating_widget_stars_static">
+                            <t t-set="rating_avg" t-value="record.rating_avg"/>
+                            <t t-set="rating_count" t-value="record.rating_count"/>
+                        </t>
+                    </div>
+                </div>
+                <div class="o_carousel_product_card_footer card-footer d-flex align-items-center">
+                    <div>
+                        <t t-call="website_sale.price_dynamic_filter_template_product_product"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>    
+
+    <template id="dynamic_filter_template_product_product_now_landscape" name="NOW landscape">
+        <t t-foreach="records" t-as="data">
+            <t t-set="record" t-value="data['_record']"/>
+            <div class="o_carousel_product_card card h-100 w-100 border" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+                <div t-if="is_sample" class="h5 o_ribbon_right bg-primary text-uppercase">Sample</div>
+                <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+                <a class="o_carousel_product_img_link" t-att-href="record.website_url">
+                    <img class="now-product-list-image o_carousel_product_card_img_top card-img-top h-100" loading="lazy" t-att-src="data['image_landscape']"
+                        t-att-alt="record.display_name"/>
+                </a>
+                <i t-if="data.get('_latest_viewed')" class="fa fa-trash o_carousel_product_remove js_remove"></i>
+                <div class="o_carousel_product_card_body card-body border-top">
+                    <a t-att-href="record.website_url" class="text-decoration-none">
+                        <div class="h3 card-title" t-field="record.display_name"/>
+                    </a>
+                    <p itemprop="description" t-field="record.description_sale" contenteditable="false"/>
+                    <div class="mt-2">
+                        <t t-if="is_view_active('website_sale.product_comment')" t-call="portal_rating.rating_widget_stars_static">
+                            <t t-set="rating_avg" t-value="record.rating_avg"/>
+                            <t t-set="rating_count" t-value="record.rating_count"/>
+                        </t>
+                    </div>
+                </div>
+                <div class="o_carousel_product_card_footer card-footer d-flex align-items-center">
+                    <div>
+                        <t t-call="website_sale.price_dynamic_filter_template_product_product"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>   
+    
+    <template id="dynamic_filter_template_product_product_now_portrait" name="NOW portrait">
+        <t t-foreach="records" t-as="data">
+            <t t-set="record" t-value="data['_record']"/>
+            <div class="o_carousel_product_card card h-100 w-100 border" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+                <div t-if="is_sample" class="h5 o_ribbon_right bg-primary text-uppercase">Sample</div>
+                <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+                <a class="o_carousel_product_img_link" t-att-href="record.website_url">
+                    <img class="now-product-list-image o_carousel_product_card_img_top card-img-top h-100" loading="lazy" t-att-src="data['image_portrait']"
+                        t-att-alt="record.display_name"/>
+                </a>
+                <i t-if="data.get('_latest_viewed')" class="fa fa-trash o_carousel_product_remove js_remove"></i>
+                <div class="o_carousel_product_card_body card-body border-top">
+                    <a t-att-href="record.website_url" class="text-decoration-none">
+                        <div class="h3 card-title mb-0" t-field="record.display_name"/>
+                    </a>
+                    <p itemprop="description" t-field="record.description_sale" contenteditable="false"/>
+                    <div class="mt-2">
+                        <t t-if="is_view_active('website_sale.product_comment')" t-call="portal_rating.rating_widget_stars_static">
+                            <t t-set="rating_avg" t-value="record.rating_avg"/>
+                            <t t-set="rating_count" t-value="record.rating_count"/>
+                        </t>
+                    </div>
+                </div>
+                <div class="o_carousel_product_card_footer card-footer d-flex align-items-center">
+                    <div>
+                        <t t-call="website_sale.price_dynamic_filter_template_product_product"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>       
+
+</data>
+
+</odoo>
