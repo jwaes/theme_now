@@ -28,10 +28,10 @@ section.s_video_43 div.media_iframe_video_size {
     padding-bottom: 75%;
 }
 
-h2 {
-    font-family: "Lato", "Odoo Unicode Support Noto", sans-serif;
-}
-
 .now-product-list-image {
     object-fit: contain !important;
+}
+
+.card, .card-body {
+    background-color: transparent !important;
 }
