@@ -2,7 +2,7 @@
     'name': 'NOW theme',
     'description': 'NOW Theme',
     'category': 'Theme/Services',
-    'version': '15.1.20',
+    'version': '15.1.21',
 
     'author': "jaco tech",
     'website': "https://jaco.tech",
@@ -30,10 +30,7 @@
         'homepage': ['s_cover', 's_title', 's_text_block', ],
     },
     'license': 'LGPL-3',
-    'assets': {
-        'web.assets_qweb': [
-            'theme_now/static/src/xml/editor.xml',
-        ],        
+    'assets': {     
         'website.assets_editor': [
             'theme_now/static/src/js/tour.js',
         ],
