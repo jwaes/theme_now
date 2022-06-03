@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="post_info"  inherit_id="website_blog.post_info">
+        <xpath expr="//div" position="replace"/>
+    </template>
+
+    <template id="post_cover_image" inherit_id="website_blog.post_cover_image">
+        <xpath expr="//t[@t-set='additionnal_classes']" position="attributes">
+            <attribute name="t-value">'o_list_cover o_not_editable ' + (not opt_blog_cards_design and ' rounded overflow-hidden mb-3' or '')</attribute>
+        </xpath>
+    </template>
+
+</odoo>

@@ -35,3 +35,8 @@ section.s_video_43 div.media_iframe_video_size {
 .card, .card-body {
     background-color: transparent !important;
 }
+
+
+.website_blog #o_wblog_posts_loop .o_record_cover_container {
+    padding-top: 100% !important;
+}

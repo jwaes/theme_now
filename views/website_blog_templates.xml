@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- remove the tags in a blog post page -->
+    <template id="blog_post_content" inherit_id="website_blog.blog_post_content">
+        <xpath expr="//div[last()]" position="replace"/>
+    </template>
+</odoo>
