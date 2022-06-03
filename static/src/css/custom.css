@@ -40,3 +40,7 @@ section.s_video_43 div.media_iframe_video_size {
 .website_blog #o_wblog_posts_loop .o_record_cover_container {
     padding-top: 100% !important;
 }
+
+#product_detail ~ .oe_structure.oe_empty > section:first-child, .o_shop_discussion_rating {
+    border-top: 0px !important;
+}
