@@ -83,6 +83,6 @@ section.s_video_43 div.media_iframe_video_size {
     object-fit: contain;
 }
 
-#products_grid .oe_product .card-body {
-    padding: 0 !important;
+#products_grid .o_wsale_products_grid_table_wrapper > .table > tbody > tr > td {
+    padding: 1rem;
 }
