@@ -45,6 +45,7 @@ section.s_video_43 div.media_iframe_video_size {
     border-top: 0px !important;
 }
 
+/* dynamic produc cards */
 .o_carousel_product_card_body a {
     color: #black;
 }
@@ -53,6 +54,8 @@ section.s_video_43 div.media_iframe_video_size {
     color: #gray;
 }
 
+
+/* shop grid */
 #products_grid .o_wsale_products_grid_table_wrapper > .table .o_wsale_product_grid_wrapper.o_wsale_product_grid_wrapper_1_1 {
     padding-top: 0;
 }
@@ -64,7 +67,11 @@ section.s_video_43 div.media_iframe_video_size {
 #products_grid .o_wsale_products_grid_table_wrapper > .table .o_wsale_product_grid_wrapper > *.card {
     border: 1px;
     border-style: solid;
-    border-color: #CED4D;
+    border-color: #CED4DA;
+}
+
+#products_grid .oe_product {
+    padding: 1 rem;
 }
 
 #products_grid .oe_product_cart .oe_product_image {
