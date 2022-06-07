@@ -27,6 +27,11 @@
         </xpath>
     </template> -->
 
+    <template id="products_item" name="NOW Products item" inherit_id="website_sale.products_item">
+        <xpath expr="//div[hasclass='oe_product_image']" position="attributes">
+            <attribute name="class" separator=" " add="p-0" remove="p-1" />
+        </xpath>
+    </template>
 
     <!-- <template id="products_item" name="NOW Products item" inherit_id="website_sale.products_item">
         <xpath expr="//form" position="replace">
@@ -66,6 +71,6 @@
     </template> -->
 
     <template id="products_description" name="NOW description" inherit_id="website_sale.products_description">
-        <xpath expr="//div[hasclass('oe_subdescription')]" position="replace"/>
+        <xpath expr="//div[hasclass('oe_subdescription')]" position="replace" />
     </template>
 </odoo>
