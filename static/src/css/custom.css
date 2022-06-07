@@ -52,3 +52,20 @@ section.s_video_43 div.media_iframe_video_size {
 .o_carousel_product_card_body a:hover {
     color: #gray;
 }
+
+#products_grid .o_wsale_products_grid_table_wrapper > .table .o_wsale_product_grid_wrapper.o_wsale_product_grid_wrapper_1_1 {
+    padding-top: 0;
+}
+
+#products_grid .o_wsale_products_grid_table_wrapper > .table .o_wsale_product_grid_wrapper > * {
+    position: relative;
+}
+
+#products_grid .o_wsale_products_grid_table_wrapper > .table .o_wsale_product_grid_wrapper > *.card {
+    border: 1px solid #CED4D;
+}
+
+#products_grid .oe_product_cart .oe_product_image img {
+    height: auto;
+    object-fit: contain;
+}
