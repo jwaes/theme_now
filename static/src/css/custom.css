@@ -44,3 +44,11 @@ section.s_video_43 div.media_iframe_video_size {
 #product_detail ~ .oe_structure.oe_empty > section:first-child, .o_shop_discussion_rating {
     border-top: 0px !important;
 }
+
+.o_carousel_product_card_body a {
+    color: #black;
+}
+
+.o_carousel_product_card_body a:hover {
+    color: #gray;
+}
