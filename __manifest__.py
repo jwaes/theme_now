@@ -2,13 +2,13 @@
     'name': 'NOW theme',
     'description': 'NOW Theme',
     'category': 'Theme/Services',
-    'version': '1.25',
+    'version': '1.26',
 
     'author': "jaco tech",
     'website': "https://jaco.tech",
     "license": "AGPL-3",
     
-    'depends': ['theme_common', 'website', 'website_sale'],
+    'depends': ['theme_common', 'website', 'website_sale', 'website_blog'],
     'data': [
         'data/data.xml',
         'data/ir_asset.xml',
@@ -38,6 +38,8 @@
         ],
         'web.assets_frontend': [
             'theme_now/static/src/css/custom.css',
+            'theme_now/static/lib/fontsdotcom/css/fonts.css',
+            'theme_now/static/lib/fontsdotcom/js/fonts.js',            
             'theme_now/static/lib/mdi/css/materialdesignicons.min.css',
         ],
         'website.assets_wysiwyg': [
