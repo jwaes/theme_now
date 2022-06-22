@@ -44,13 +44,17 @@ section.s_video_43 div.media_iframe_video_size {
     border-top: 0px !important;
 }
 
-/* dynamic produc cards */
+/* dynamic product cards */
 .o_carousel_product_card_body a {
     color: #black;
 }
 
 .o_carousel_product_card_body a:hover {
     color: #gray;
+}
+
+#o-carousel-product .carousel-outer {
+    height: auto !important;
 }
 
 /* shop grid */
@@ -83,4 +87,13 @@ section.s_video_43 div.media_iframe_video_size {
 
 #products_grid .o_wsale_products_grid_table_wrapper > .table > tbody > tr > td {
     padding: 1rem;
+}
+
+
+.css_attribute_color.pbutter {
+    background: url("/theme_now/static/src/img/PBUTTER.png");
+}
+
+.css_attribute_color.wquartz {
+    background: url("/theme_now/static/src/img/WQUARTZ.png");
 }
