@@ -2,7 +2,7 @@
 <odoo>
 
     
-    <template id="product" name="NOW Product" inherit_id="website_sale.product">
+    <template id="product" inherit_id="website_sale.product">
         <xpath expr="//div[hasclass('row')][2]//div[1]" position="attributes" >
             <attribute name="class" separator=" " add="col-md-8" remove="col-md-6" />
         </xpath>
@@ -12,17 +12,23 @@
         <xpath expr="//div['product_attributes_simple']/table" position="replace"/>
         <xpath expr="//a[@id='add_to_cart']" position="attributes">
             <attribute name="class" separator=" " remove="btn-lg"/>
-        </xpath>        
+        </xpath>
     </template>
 
-    <template id="products_item" name="NOW Products item" inherit_id="website_sale.products_item">
+    <template id="products_item" inherit_id="website_sale.products_item">
         <xpath expr="//div[hasclass('oe_product_image')]" position="attributes">
             <attribute name="class" separator=" " add="p-0" remove="p-1" />
         </xpath>
     </template>
 
-    <template id="products_description" name="NOW description" inherit_id="website_sale.products_description">
+    <template id="products_description" inherit_id="website_sale.products_description">
         <xpath expr="//div[hasclass('oe_subdescription')]" position="replace" />
+    </template>
+
+    <template id="products" inherit_id="website_sale.products">
+        <xpath expr="//table" position="attributes">
+            <attribute name="class" separator=" " add="mb-4"/>
+        </xpath>
     </template>
 
 </odoo>

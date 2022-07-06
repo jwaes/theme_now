@@ -80,6 +80,10 @@ section.s_video_yt .container {
     padding-top: 0;
 }
 
+#products_grid .o_wsale_products_grid_table_wrapper {
+    margin: -1.5rem;
+}
+
 #products_grid .o_wsale_products_grid_table_wrapper > .table .o_wsale_product_grid_wrapper > * {
     position: relative;
 }
