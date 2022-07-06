@@ -18,7 +18,13 @@
             </t>
             <t t-snippet="theme_now.s_video_43">
                 <keywords>image, media</keywords>
-            </t>            
+            </t>
+            <!-- <t t-snippet="theme_now.s_video_yt">
+                <keywords>image, media</keywords>
+            </t> -->
+            <t t-snippet="theme_now.s_video_plyr">
+                <keywords>image, media</keywords>
+            </t> 
         </xpath>
     </template>
 </odoo>

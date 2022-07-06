@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
     padding: 2rem 1rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .nav-link {
@@ -20,12 +20,17 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0.75em;
 }
 
+section.s_video_yt .yt_spacer,
 section.s_video_169 div.media_iframe_video_size {
     padding-bottom: 56.25%;
 }
 
 section.s_video_43 div.media_iframe_video_size {
     padding-bottom: 75%;
+}
+
+section.s_video_yt .container {
+    max-width: unset;
 }
 
 .now-product-list-image {
@@ -56,6 +61,19 @@ section.s_video_43 div.media_iframe_video_size {
 #o-carousel-product .carousel-outer {
     height: auto !important;
 }
+
+.css_quantity .btn {
+    padding: 0.5rem !important;
+}
+
+.css_quantity input {
+    max-width: 45px !important;
+}
+
+.vatextrainfo {
+    font-size: 0.9rem;
+}
+
 
 /* shop grid */
 #products_grid .o_wsale_products_grid_table_wrapper > .table .o_wsale_product_grid_wrapper.o_wsale_product_grid_wrapper_1_1 {
@@ -89,6 +107,10 @@ section.s_video_43 div.media_iframe_video_size {
     padding: 1rem;
 }
 
+#products_grid .product_price .h5 {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+}
 
 .css_attribute_color.pbutter {
     background: url("/theme_now/static/src/img/PBUTTER.png");
@@ -96,4 +118,8 @@ section.s_video_43 div.media_iframe_video_size {
 
 .css_attribute_color.wquartz {
     background: url("/theme_now/static/src/img/WQUARTZ.png");
+}
+
+.s_video_plyr {
+    --plyr-color-main: silver;
 }

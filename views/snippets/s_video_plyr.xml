@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ======== Video full width YT ======== -->
+    <template id="s_video_plyr" name="Video PLYR">
+
+        <section class="s_video_plyr pt0 pb0 o_colored_level s_parallax_no_overflow_hidden ">
+            <t t-set="uniq" t-value="datetime.datetime.now().microsecond"/>
+            <div class="s_embed_code_embedded">
+            <video t-attf-id="player{{uniq}}" controls="false" autoplay="true" loop="Loop" muted="true" crossorigin="true" playsinline="true" class="js-player w-100">
+                <source src="https://notonlywhite.global.ssl.fastly.net/vid/not_only_white-simple_pleasures_created_for_you%20(540p).mp4" type="video/mp4" size="540" />
+                <source src="https://notonlywhite.global.ssl.fastly.net/vid/not_only_white-simple_pleasures_created_for_you%20(720p).mp4" type="video/mp4" size="720" />
+                <source src="https://notonlywhite.global.ssl.fastly.net/vid/not_only_white-simple_pleasures_created_for_you%20(1080p).mp4" type="video/mp4" size="1080" />
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="https://notonlywhite.global.ssl.fastly.net/vid/not_only_white-simple_pleasures_created_for_you%20(540p).mp4" download="true">Download</a>
+            </video>
+        </div>
+        </section>
+
+    </template>
+
+
+    <record id="theme_now.s_video_plyr_js" model="ir.asset">
+        <field name="name">Plyr 000 JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_now/static/src/js/plyrinit.js</field>
+        
+    </record>
+
+</odoo>

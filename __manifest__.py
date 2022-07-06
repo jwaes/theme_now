@@ -2,7 +2,7 @@
     'name': 'NOW theme',
     'description': 'NOW Theme',
     'category': 'Theme/Services',
-    'version': '1.28',
+    'version': '1.33',
 
     'author': "jaco tech",
     'website': "https://jaco.tech",
@@ -25,6 +25,8 @@
         'views/snippets/s_image_text.xml',
         'views/snippets/s_video_169.xml',
         'views/snippets/s_video_43.xml',
+        # 'views/snippets/s_video_yt.xml',
+        'views/snippets/s_video_plyr.xml',
     ],
     'images': [
     ],
@@ -38,6 +40,7 @@
         ],
         'web.assets_frontend': [
             'theme_now/static/src/css/custom.css',
+            'theme_now/static/src/css/cust.scss',
             'theme_now/static/lib/fontsdotcom/css/fonts.css',
             'theme_now/static/lib/fontsdotcom/js/fonts.js',            
             'theme_now/static/lib/mdi/css/materialdesignicons.min.css',
