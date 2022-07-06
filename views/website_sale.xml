@@ -10,6 +10,9 @@
             <attribute name="class" separator=" " add="col-md-4" remove="col-md-6" />
         </xpath>
         <xpath expr="//div['product_attributes_simple']/table" position="replace"/>
+        <xpath expr="//a[@id='add_to_cart']" position="attributes">
+            <attribute name="class" separator=" " remove="btn-lg"/>
+        </xpath>        
     </template>
 
     <template id="products_item" name="NOW Products item" inherit_id="website_sale.products_item">
@@ -20,12 +23,6 @@
 
     <template id="products_description" name="NOW description" inherit_id="website_sale.products_description">
         <xpath expr="//div[hasclass('oe_subdescription')]" position="replace" />
-    </template>
-
-    <template id="product" inherit_id="website_sale.product">
-        <xpath expr="//a[@id='add_to_cart']" position="attributes">
-            <attribute name="class" separator=" " remove="btn-lg"/>
-        </xpath>
     </template>
 
 </odoo>
