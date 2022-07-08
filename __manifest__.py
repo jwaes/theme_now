@@ -2,7 +2,7 @@
     'name': 'NOW theme',
     'description': 'NOW Theme',
     'category': 'Theme/Services',
-    'version': '1.39',
+    'version': '1.41',
 
     'author': "jaco tech",
     'website': "https://jaco.tech",
@@ -26,12 +26,12 @@
         'views/snippets/s_video_169.xml',
         'views/snippets/s_video_43.xml',
         # 'views/snippets/s_video_yt.xml',
-        'views/snippets/s_video_plyr.xml',
+        # 'views/snippets/s_video_plyr.xml',
     ],
     'images': [
     ],
     'snippet_lists': {
-        'homepage': ['s_cover', 's_title', 's_text_block', ],
+        'homepage': ['s_cover', 's_title', 's_text_block', 's_video_plyr',],
     },
     'license': 'LGPL-3',
     'assets': {     
@@ -45,8 +45,9 @@
             'theme_now/static/lib/fontsdotcom/js/fonts.js',            
             'theme_now/static/lib/mdi/css/materialdesignicons.min.css',
         ],
-        'website.assets_wysiwyg': [
-            'theme_now/static/src/js/snippets.editor.js',
-        ],
+        # 'website.assets_wysiwyg': [
+        #     # 'theme_now/static/src/js/snippets.editor.js',
+        #     # 'theme_now/static/src/snippets/s_video_plyr/options.js',
+        # ],
     }
 }
