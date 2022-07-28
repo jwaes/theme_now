@@ -7,7 +7,7 @@
             <attribute name="class" add="float-right" remove="mx-auto" separator=" "/>
         </xpath>
 
-        <xpath expr="//div[@class='container']/div" position="attributes">
+        <xpath expr="//div[hasclass('container')]/div" position="attributes">
             <attribute name="class" add="align-items-end" remove="align-items-center" separator=" "/>
         </xpath>    
 

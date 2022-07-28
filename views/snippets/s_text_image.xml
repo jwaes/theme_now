@@ -6,11 +6,11 @@
             <attribute name="src">/theme_now/static/src/img/content/window_square.jpg</attribute>
         </xpath>
 
-        <xpath expr="//div[@class='container']/div" position="attributes">
+        <xpath expr="//div[hasclass('container')]/div" position="attributes">
             <attribute name="class" add="align-items-end" remove="align-items-center" separator=" "/>
         </xpath>    
 
-        <xpath expr="//div[@class='container']/div/div[1]" position="attributes">
+        <xpath expr="//div[hasclass('container')]/div/div[1]" position="attributes">
             <attribute name="class" add="col-lg-3 offset-lg-3" remove="col-lg-6" separator=" "/>
         </xpath> 
 
