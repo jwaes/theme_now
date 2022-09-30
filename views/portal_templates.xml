@@ -32,4 +32,10 @@
         </xpath>
     </template>
 
+    <template id="language_selector"  inherit_id="portal.language_selector">
+        <xpath expr="//button" position="attributes">
+            <attribute name="t-attf-class" remove="btn-sm" />
+        </xpath>
+    </template>
+
 </odoo>
