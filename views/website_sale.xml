@@ -2,21 +2,7 @@
 <odoo>
 
     
-    <template id="product" inherit_id="website_sale.product">
-        <xpath expr="//div[hasclass('row')][2]//div[1]" position="attributes" >
-            <attribute name="class" separator=" " add="col-md-8" remove="col-md-6" />
-        </xpath>
-        <xpath expr="//div[hasclass('row')][2]//div[2]" position="attributes" >
-            <attribute name="class" separator=" " add="col-md-4" remove="col-md-6" />
-        </xpath>
-        <xpath expr="//div['product_attributes_simple']/table" position="replace"/>
-        <xpath expr="//a[@id='add_to_cart']" position="attributes">
-            <attribute name="class" separator=" " remove="btn-lg"/>
-        </xpath>
-        <!-- <xpath expr="//t[@t-call='website_sale.shop_product_carousel']" position="replace">
-            <t t-call="theme_now.shop_product_single"/>
-        </xpath> -->
-    </template>
+
 
     <template id="products_item" inherit_id="website_sale.products_item">
         <xpath expr="//div[hasclass('oe_product_image')]" position="attributes">
@@ -46,7 +32,15 @@
                         <t t-out="product_image.embed_code"/>
                     </div>
                     <div  t-else="" t-field="product_image.image_1920" class="d-flex align-items-center justify-content-center h-100" t-options='{"widget": "image", "preview_image": "image_1024", "class": "product_detail_img mh-100", "alt-field": "name", "zoom": product_image.can_image_1024_be_zoomed and "image_1920", "itemprop": "image"}'/>
-
+                    <span>blah</span>
+                    <t t-if="product_variant.website_ribbon_id">
+                        <!-- <span class="o_ribbon bg-danger o_ribbon_left" style="">Archive sale</span> -->
+                        <t t-set="bg_color" t-value="product_variant.website_ribbon_id.bgcolor"/>
+                        <t t-set="text_color" t-value="product_variant.website_ribbon_id.text_color"/>
+                        <t t-set="bg_class" t-value="product_variant.website_ribbon_id.html_class"/>
+                        <span t-attf-class="o_ribbon #{bg_class}" t-attf-style="#{text_color and ('color: %s; ' % text_color)}#{bg_color and 'background-color:' + bg_color}" t-out="product_variant.website_ribbon_id.html or ''"/>
+            
+                    </t>
                 </t>
             </t>
         </div>
