@@ -8,7 +8,7 @@
     'website': "https://jaco.tech",
     "license": "AGPL-3",
     
-    'depends': ['theme_common', 'website', 'website_sale_wishlist', 'website_blog'],
+    'depends': ['theme_common', 'website', 'website_blog'],
     'data': [
         'data/data.xml',
         'data/ir_asset.xml',
