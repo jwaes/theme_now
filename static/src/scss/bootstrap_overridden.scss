@@ -18,8 +18,10 @@ $navbar-light-disabled-color: rgba($gray-900, 0.3);
 $navbar-light-toggler-border-color: rgba($gray-900, 0.1);
 // $dropdown-bg: #fcfaf8;  //hardcoded ?!
 
-// $font-size-base: 0.875rem !default;
-$font-size-base: 1rem !default;
+$font-size-base: 0.875rem !default; // 14px
+$font-size-large: ceil(($font-size-base * 1.25)) !default; 
+$font-size-small: ceil(($font-size-base * 0.85)) !default; 
+// $font-size-base: 1rem !default;
 
 $h1-font-size: 2rem !default;
 $h2-font-size: 1.75rem !default;
