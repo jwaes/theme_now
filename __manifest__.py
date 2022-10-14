@@ -2,7 +2,7 @@
     'name': 'NOW theme',
     'description': 'NOW Theme',
     'category': 'Theme/Services',
-    'version': '1.54',
+    'version': '1.55',
 
     'author': "jaco tech",
     'website': "https://jaco.tech",
