@@ -26,6 +26,9 @@
                         </t>            
             </ul>
         </xpath>
+        <xpath expr="//t[@t-call='website.placeholder_header_language_selector']/t" position="replace">
+            <t t-set="_div_classes" t-valuef="ml-lg-3 mb-2"/>
+        </xpath>
     </template>
 
     <template id="template_header_default_cart_disable" inherit_id="website_sale.template_header_default" priority="4">
