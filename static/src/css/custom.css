@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     padding: 2rem 1rem;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .nav-link {
@@ -63,6 +63,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .o_header_affixed.o_header_is_scrolled .navbar {
     padding: 0.75rem 1rem;
+}
+
+header .show #top_menu, header .show #icons_menu {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center !important;
+}
+
+header .show #jt_now_sub_menu {
+    display: block !important;
+}
+
+#header_slogan {
+    color: #CCC !important;
+}
+
+.o_header_affixed.o_header_is_scrolled #header_slogan {
+    display: none !important;
 }
 
 .mdi-lg {
@@ -101,11 +119,11 @@ section.s_video_yt .container {
 
 /* dynamic product cards */
 .o_carousel_product_card_body a {
-    color: #black;
+    color: black;
 }
 
 .o_carousel_product_card_body a:hover {
-    color: #gray;
+    color: gray;
 }
 
 #o-carousel-product .carousel-outer {

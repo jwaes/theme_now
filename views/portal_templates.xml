@@ -33,9 +33,9 @@
     </template>
 
     <template id="language_selector"  inherit_id="portal.language_selector">
-        <xpath expr="//button" position="attributes">
-            <attribute name="t-attf-class" remove="btn-sm" />
-        </xpath>
+        <xpath expr="//button/span" position="attributes">
+            <attribute name="t-esc">active_lang[2]</attribute>
+        </xpath>        
     </template>
 
 </odoo>
