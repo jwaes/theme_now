@@ -253,3 +253,7 @@ section.s_video_yt .container {
 .bubble_out_stock {
     background-color: #8788b8;
 }
+
+a {
+    font-weight: 700;
+}
