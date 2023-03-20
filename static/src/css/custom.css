@@ -254,9 +254,10 @@ section.s_video_yt .container {
     background-color: #8788b8;
 }
 
-a {
-    font-weight: 700;
-}
+/* a {
+    text-decoration: underline;
+    text-decoration-color: red;
+} */
 
 .oe_product_cart:hover .o_wsale_product_information {
     background: none !important;
