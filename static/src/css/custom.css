@@ -257,3 +257,7 @@ section.s_video_yt .container {
 a {
     font-weight: 700;
 }
+
+.oe_product_cart:hover .o_wsale_product_information {
+    background: none !important;
+}
