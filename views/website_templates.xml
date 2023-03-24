@@ -66,42 +66,54 @@
                     <div id="jt_now_sub_menu" class="col d-flex justify-content-end align-items-end">
                         <ul id="icons_menu" class="nav navbar-nav align-items-end">
                             
-                            
+
                             <li class="nav-item">
                                 <a role="menuitem" href="/custom-made" class="nav-link">
+                                    <span >Custom Made</span>
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a role="menuitem" href="/blog/stories-1" class="nav-link">
                                     <span >Stories</span>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a role="menuitem" href="/custom-made" class="nav-link">
+                                <a role="menuitem" href="/about" class="nav-link">
                                     <span >About</span>
                                 </a>
                             </li>     
                             
                             <li class="nav-item">
-                                <a role="menuitem" href="/custom-made" class="nav-link">
+                                <a role="menuitem" href="/contact" class="nav-link">
                                     <span >Contact</span>
                                 </a>
                             </li>
 
                             <t id="empty"/>
 
+                            <t t-call="website_sale.header_cart_link">
+                                <t t-set="_icon" t-value="True"/>
+                                <t t-set="_item_class" t-valuef="nav-item"/>
+                                <t t-set="_link_class" t-valuef="nav-link"/>
+                            </t>                            
+
                             <t t-call="portal.placeholder_user_sign_in">
-                                <t t-set="_item_class" t-valuef="nav-item ml-lg-auto"/>
+                                <t t-set="_item_class" t-valuef="nav-item nav-item-small ml-lg-auto"/>
                                 <t t-set="_link_class" t-valuef="nav-link font-weight-bold"/>
                             </t>
                             
                             <t t-call="portal.user_dropdown">
                                 <t t-set="_user_name" t-value="true"/>
-                                <t t-set="_item_class" t-valuef="nav-item dropdown ml-lg-auto"/>
+                                <t t-set="_item_class" t-valuef="nav-item nav-item-small dropdown ml-lg-auto"/>
                                 <t t-set="_link_class" t-valuef="nav-link font-weight-bold"/>
                             </t>            
                         </ul>
 
                         <!-- Language Selector -->
                         <t t-call="website.placeholder_header_language_selector">
-                            <t t-set="_div_classes" t-valuef="ml-lg-3"/>
+                            <!-- <t t-set="_div_classes" t-valuef="ml-lg-3"/> -->
                         </t>
 
                         <!-- Call To Action -->
@@ -179,22 +191,16 @@
     </template>
 
 
-
+<!-- 
     <template id="template_header_default_cart" inherit_id="website.template_header_default" priority="7">
         <xpath expr="//t[@id='empty']" position="after">
             <t t-call="website_sale.header_cart_link">
                 <t t-set="_icon" t-value="True"/>
-                <t t-set="_item_class" t-value="'nav-item my-xl-0 my-3 mx-lg-3'"/>
-                <t t-set="_link_class" t-value="'nav-link'"/>
+                <t t-set="_item_class" t-value="nav-item"/>
+                <t t-set="_link_class" t-value="nav-link"/>
             </t>
-
-            <!-- <t t-call="website_sale_wishlist.header_wishlist_link">
-                <t t-set="_icon" t-value="True"/>
-                <t t-set="_item_class" t-value="'nav-item mr-lg-3'"/>
-                <t t-set="_link_class" t-value="'nav-link'"/>
-            </t>          -->
         </xpath>
-    </template>
+    </template> -->
 
     <!-- 
     <template id="template_header_default" inherit_id="website.template_header_default" name="NOW Template Header Default">
