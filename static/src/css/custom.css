@@ -145,6 +145,7 @@ section.s_video_yt .container {
 .css_quantity .btn {
     padding: 0.5rem !important;
     background-color: transparent !important;
+    border: 1px solid #E9ECEF
 }
 
 .css_quantity .btn:focus {
@@ -154,7 +155,7 @@ section.s_video_yt .container {
 .css_quantity input {
     max-width: 45px !important;
     background-color: transparent !important;
-    border: none !important;
+    /* border: none !important; */
 }
 
 .vatextrainfo {
