@@ -274,3 +274,14 @@ section.s_video_yt .container {
 .oe_product_cart:hover .o_wsale_product_information {
     background: none !important;
 }
+
+.pagination .page-item .page-link,
+.pagination .page-item.active .page-link,
+.pagination .page-item.disabled .page-link {
+    background: none !important;
+    color: inherit;
+}
+
+.pagination .page-item .page-link:hover {
+    border-color: inherit;
+}
