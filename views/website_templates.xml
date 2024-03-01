@@ -36,7 +36,7 @@
         </xpath>
     </template> -->
 
-    <template id="template_header_default" inherit_id="website.template_header_default" priority="1">
+    <template id="template_header_default" inherit_id="website.template_header_default">
         <xpath expr="//div[@id='top_menu_container']" position="replace">
             <div id="top_menu_container" class="container-fluid justify-content-start justify-content-lg-between">
                 <!-- Navbar Collapse -->
