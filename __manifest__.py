@@ -35,9 +35,9 @@
     },
     'license': 'LGPL-3',
     'assets': {     
-        'website.assets_editor': [
-            'theme_now/static/src/js/tour.js',
-        ],
+        # 'website.assets_editor': [
+        #     'theme_now/static/src/js/tour.js',
+        # ],
         'web.assets_frontend': [
             'theme_now/static/src/css/custom.css',
             'theme_now/static/src/css/cust.scss',
