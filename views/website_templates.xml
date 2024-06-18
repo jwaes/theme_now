@@ -132,7 +132,7 @@
     </template> -->
 
     <template id="navbar" inherit_id="website.navbar">
-        <xpath expr="//nav" position="before">
+        <xpath expr="//nav[1]" position="before">
             <div id="header_slogan" class="py-2 px-5 bg-dark text-light justify-content-end d-none d-xl-flex">design bathroom products for modern homes and commercial spaces</div>
         </xpath>
     </template>
