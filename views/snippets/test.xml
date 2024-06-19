@@ -357,7 +357,7 @@
         <we-button-group string="Alignment">
             <we-button class="fa fa-fw fa-align-left" title="Left" data-select-class="text-left"/>
             <we-button class="fa fa-fw fa-align-center" title="Center" data-select-class="text-center"/>
-            <we-button class="fa fa-fw fa-align-right" title="Right" data-select-class="text-right"/>
+            <we-button class="fa fa-fw fa-align-right" title="Right" data-select-class="text-end"/>
         </we-button-group>
     </div>
 
@@ -1052,7 +1052,7 @@
         <we-select string="Text Alignment" data-cover-opt-name="text_align">
             <we-button data-select-class="">Left</we-button>
             <we-button data-select-class="text-center">Centered</we-button>
-            <we-button data-select-class="text-right">Right</we-button>
+            <we-button data-select-class="text-end">Right</we-button>
         </we-select>
     </div>
 
